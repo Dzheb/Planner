@@ -15,12 +15,14 @@ public class Notebook {
 
     // добавление задачи
     public boolean add(Note note) {
-        boolean flag = false;
+        // boolean flag = false;
         if (!tasks.contains(note)) {
             tasks.add(note);
-            flag = true;
+            return true;
+        } else {
+
+            return false;
         }
-        return flag;
     }
 
     // чтение задачи
@@ -30,12 +32,14 @@ public class Notebook {
 
     // удаление задачи
     public boolean remove(int index) {
-        boolean flag = false;
+        // boolean flag = false;
         if (index != -1) {
             tasks.remove(tasks.get(index));
-            flag = true;
+            return true;
+        } else {
+
+            return false;
         }
-        return flag;
     }
 
     private boolean contains(int index) {
