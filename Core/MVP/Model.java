@@ -63,16 +63,14 @@ public class Model {
                 writer.append(String.format("%d,%s,%s,%s,%s,%s,%s\n", note.getId(), note.getDate(), note.getTime(), note.getDeadline(), note.getTask(), note.getAuthor(), note.getPriority()));
             }
             writer.flush();
-            writer.close();
+            // writer.close();
         } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+            System.err.print(ex.getMessage());
         }
     }
 
     public void clear() {
-        // for (var note : currentBlock.getNotes()) {
-        // currentBlock.remove(note);
-        // }
+        
         currentBlock = new Notebook();
     }
 
