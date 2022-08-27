@@ -22,7 +22,7 @@ public class Note implements Comparable<Note> {
     @Override
     public int compareTo(Note o) {
 
-        if (this.deadline == o.deadline && this.priority == o.priority)
+        if (this.deadline.equals(o.deadline) && this.priority.equals(o.priority))
             return 1;
         else
             return 0;
@@ -32,7 +32,7 @@ public class Note implements Comparable<Note> {
     public boolean equals(Object obj) {
         Note nt = (Note) obj;
         return this.id == nt.id
-                && this.task == nt.task;
+                && this.task.equals(nt.task);
     }
 
     public int getId() {
