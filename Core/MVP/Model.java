@@ -60,8 +60,7 @@ public class Model {
         try (FileWriter writer = new FileWriter(path, false)) {
             for (int i = 0; i < currentBlock.count(); i++) {
                 Note note = currentBlock.getTask(i);
-                writer.append(String.format("%d,%s,%s,%s,%s,%s,%s\n", note.id, note.date, note.time, note.deadline,
-                        note.task, note.author, note.priority));
+                writer.append(String.format("%d,%s,%s,%s,%s,%s,%s\n", note.getId(), note.getDate(), note.getTime(), note.getDeadline(), note.getTask(), note.getAuthor(), note.getPriority()));
             }
             writer.flush();
             writer.close();

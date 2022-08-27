@@ -23,8 +23,8 @@ public class ConsoleView implements View {
     public void print(Notebook currentBlock) {
 
         for (var note : currentBlock.getNotes()) {
-            System.out.printf("%d\t%s\t%s\t%s\t%s\t%s\t%s\n", note.id, note.date, note.time, note.deadline, note.task,
-                    note.author, note.priority);
+            System.out.printf("%d\t%s\t%s\t%s\t%s\t%s\t%s\n", note.getId(), note.getDate(), note.getTime(), note.getDeadline(), note.getTask(),
+            note.getAuthor(), note.getPriority());
         }
 
     }
@@ -131,11 +131,11 @@ public class ConsoleView implements View {
     // вывод записи о задаче
     @Override
     public void printNote(Note currentNote) {
-        setTask(currentNote.task);
-        setName(currentNote.author);
-        setDate(currentNote.date);
-        setDeadline(currentNote.deadline);
-        setPr(currentNote.priority);
+        setTask(currentNote.getTask());
+        setName(currentNote.getAuthor());
+        setDate(currentNote.getDate());
+        setDeadline(currentNote.getDeadline());
+        setPr(currentNote.getPriority());
     }
 
 }
